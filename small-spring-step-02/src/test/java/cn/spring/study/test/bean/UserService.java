@@ -9,6 +9,22 @@ package cn.spring.study.test.bean;
 public class UserService {
 
     /**
+     * 名字
+     */
+    private String name;
+
+    public UserService() {
+    }
+
+    public UserService(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    /**
      * 查询用户信息
      *
      * @author wangzhibu
@@ -17,5 +33,7 @@ public class UserService {
     public void queryUserInfo() {
         System.out.println("查询用户信息");
     }
+
+
 
 }
