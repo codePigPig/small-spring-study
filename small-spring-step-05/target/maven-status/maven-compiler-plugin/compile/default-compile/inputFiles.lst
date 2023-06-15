@@ -1,0 +1,15 @@
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/CglibSubclassingInstantiationStrategy.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/SingletonBeanRegistry.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/DefaultSingletonBeanRegistry.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/PropertyValues.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/InstantiationStrategy.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/config/BeanReference.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/config/BeanDefinition.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/DefaultListableBeanFactory.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/BeanFactory.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/config/BeansException.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/SimpleInstantiationStrategy.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/AbstractBeanFactory.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/AbstractAutoWireCapableBeanFactory.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/support/BeanDefinitionRegistry.java
+/Users/codepigpig/IdeaProjects/code/small-spring-study/small-spring-step-04/src/main/java/cn/spring/study/factory/PropertyValue.java
