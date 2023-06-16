@@ -1,6 +1,6 @@
-package cn.spring.study.beans.factory;
+package cn.spring.study.beans.factory.support;
 
-import cn.spring.study.beans.factory.config.BeansException;
+import cn.spring.study.beans.BeansException;
 import cn.spring.study.core.io.Resource;
 import cn.spring.study.core.io.ResourceLoader;
 
@@ -15,7 +15,7 @@ public interface BeanDefinitionReader {
     /**
      * 获取注册表
      *
-     * @return {@link BeanDefinitionRegistry }
+     * @return {@link cn.spring.study.beans.factory.BeanDefinitionRegistry }
      * @author wangzhibu
      * @date 2023/06/15
      */

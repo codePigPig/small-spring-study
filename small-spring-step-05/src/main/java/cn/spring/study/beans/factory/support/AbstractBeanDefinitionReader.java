@@ -1,7 +1,5 @@
 package cn.spring.study.beans.factory.support;
 
-import cn.spring.study.beans.factory.BeanDefinitionReader;
-import cn.spring.study.beans.factory.BeanDefinitionRegistry;
 import cn.spring.study.core.io.DefaultResourceLoader;
 import cn.spring.study.core.io.ResourceLoader;
 

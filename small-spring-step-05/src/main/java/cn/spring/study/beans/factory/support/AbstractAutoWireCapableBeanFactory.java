@@ -3,7 +3,7 @@ package cn.spring.study.beans.factory.support;
 import cn.hutool.core.bean.BeanUtil;
 import cn.spring.study.beans.factory.config.BeanDefinition;
 import cn.spring.study.beans.factory.config.BeanReference;
-import cn.spring.study.beans.factory.config.BeansException;
+import cn.spring.study.beans.BeansException;
 import cn.spring.study.beans.PropertyValue;
 import cn.spring.study.beans.PropertyValues;
 

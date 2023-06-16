@@ -1,4 +1,4 @@
-package cn.spring.study.beans.factory.support;
+package cn.spring.study.beans.factory.config;
 
 /**
  * 单例Bean注册表

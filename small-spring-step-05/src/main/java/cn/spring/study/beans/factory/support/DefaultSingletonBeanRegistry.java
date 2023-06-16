@@ -1,5 +1,7 @@
 package cn.spring.study.beans.factory.support;
 
+import cn.spring.study.beans.factory.config.SingletonBeanRegistry;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -7,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author wangzhibu
  * @date 2023/3/7 22:56:22
  */
-public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry{
+public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
 
     /**
      * 单例Bean映射

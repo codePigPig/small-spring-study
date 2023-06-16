@@ -3,9 +3,11 @@ package cn.spring.study.test;
 import cn.hutool.core.io.IoUtil;
 import cn.spring.study.beans.PropertyValue;
 import cn.spring.study.beans.PropertyValues;
+import cn.spring.study.beans.factory.BeanFactory;
 import cn.spring.study.beans.factory.config.BeanDefinition;
 import cn.spring.study.beans.factory.config.BeanReference;
 import cn.spring.study.beans.factory.support.DefaultListableBeanFactory;
+import cn.spring.study.beans.factory.xml.XmlBeanDefinitionReader;
 import cn.spring.study.core.io.DefaultResourceLoader;
 import cn.spring.study.core.io.Resource;
 import cn.spring.study.test.bean.UserDao;
@@ -58,9 +60,25 @@ public class ApiTest {
 
     @Test
     public void test_url() throws IOException {
-        Resource resource = resourceLoader.getResource("src/test/resources/important.properties");
+        Resource resource = resourceLoader.getResource("URL");
         InputStream inputStream = resource.getInputStream();
         String context = IoUtil.readUtf8(inputStream);
         System.out.println(context);
+    }
+
+    @Test
+    public void test_xml() {
+        // step1: 初始化 BeanFactory 工厂，
+        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+
+        // step2: 读取配置文件 并 注册 bean到注册中
+        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
+        reader.loadBeanDefinitions("classpath:spring.xml");
+
+        // step3: 获取 bean 对象并调用
+        UserService userService = beanFactory.getBean("userService", UserService.class);
+
+        userService.queryUserInfo();
+
     }
 }

@@ -1,5 +1,7 @@
 package cn.spring.study.beans.factory;
 
+import cn.spring.study.beans.BeansException;
+
 /**
  * bean 工厂接口
  *
@@ -16,7 +18,7 @@ public interface BeanFactory {
      * @author wangzhibu
      * @date 2023/03/07
      */
-    Object getBean(String name);
+    Object getBean(String name)throws BeansException;
 
     /**
      * 获取Bean， 指定构造参数
@@ -27,5 +29,7 @@ public interface BeanFactory {
      * @author wangzhibu
      * @date 2023/03/07
      */
-    Object getBean(String beanName, Object... args);
+    Object getBean(String beanName, Object... args)throws BeansException;
+
+    <T> T getBean(String name, Class<T> requiredType) throws BeansException;
 }

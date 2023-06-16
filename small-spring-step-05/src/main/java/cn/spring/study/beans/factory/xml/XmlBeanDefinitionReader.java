@@ -3,11 +3,11 @@ package cn.spring.study.beans.factory.xml;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.XmlUtil;
 import cn.spring.study.beans.PropertyValue;
-import cn.spring.study.beans.factory.BeanDefinitionRegistry;
 import cn.spring.study.beans.factory.config.BeanDefinition;
 import cn.spring.study.beans.factory.config.BeanReference;
-import cn.spring.study.beans.factory.config.BeansException;
+import cn.spring.study.beans.BeansException;
 import cn.spring.study.beans.factory.support.AbstractBeanDefinitionReader;
+import cn.spring.study.beans.factory.support.BeanDefinitionRegistry;
 import cn.spring.study.core.io.Resource;
 import cn.spring.study.core.io.ResourceLoader;
 import org.w3c.dom.Document;
@@ -32,7 +32,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
      * @author wangzhibu
      * @date 2023/06/15
      */
-    protected XmlBeanDefinitionReader(BeanDefinitionRegistry registry) {
+    public XmlBeanDefinitionReader(BeanDefinitionRegistry registry) {
         super(registry);
     }
 
@@ -102,17 +102,17 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         NodeList childNodes = element.getChildNodes();
         // step4: 遍历所有子子节点
         for (int i = 0; i < childNodes.getLength(); i++) {
-            Node node = childNodes.item(i);
+//            Node node = childNodes.item(i);
             // step5: 如果当前节点不是元素类型（如注释或者文本节点），则跳过
-            if (!(node instanceof Element)) {
+            if (!(childNodes.item(i) instanceof Element)) {
                 continue;
             }
             // step6: 判断当前元素的标签名不是 "bean", 则跳过
-            if (!"bean".equals(node.getNodeName())) {
+            if (!"bean".equals(childNodes.item(i).getNodeName())) {
                 continue;
             }
             // step7: 将子节点转换为 元素，以便获取其属性
-            Element bean = (Element) node;
+            Element bean = (Element) childNodes.item(i);
             String id = bean.getAttribute("id");
             String name = bean.getAttribute("name");
             String className = bean.getAttribute("class");
@@ -129,16 +129,17 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
             BeanDefinition beanDefinition = new BeanDefinition(clazz);
             // step11: 遍历 bean 元素的所有子节点，为 BeanDefinition 填充属性问题
             for (int j = 0; j < bean.getChildNodes().getLength(); j++) {
-                Element childElement= (Element) bean.getChildNodes().item(i);
+                Node childNode=  bean.getChildNodes().item(j);
                 // step12: 如果当前节点不是元素类型（如注释或者文本节点），则跳过
-                if (!(childElement instanceof Element)) {
+                if (!(childNode instanceof Element)) {
                     continue;
                 }
                 // step13: 如果当前元素的标签名不是 "property"，则跳过
-                if (!"property".equals(childElement.getNodeName())) {
+                if (!"property".equals(childNode.getNodeName())) {
                     continue;
                 }
                 // step14: 获取 property 元素的 name、value、ref 属性
+                Element childElement = (Element) childNode;
                 String childName = childElement.getAttribute("name");
                 String childValue = childElement.getAttribute("value");
                 String childRef = childElement.getAttribute("ref");

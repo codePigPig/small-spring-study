@@ -1,4 +1,4 @@
-package cn.spring.study.beans.factory.config;
+package cn.spring.study.beans;
 
 /**
  * @author wangzhibu
