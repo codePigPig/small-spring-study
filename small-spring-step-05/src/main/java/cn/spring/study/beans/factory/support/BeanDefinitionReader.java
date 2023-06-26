@@ -6,6 +6,9 @@ import cn.spring.study.core.io.ResourceLoader;
 
 /**
  * 定义 bean 的读取相关接口
+ * 这是一个接口，用于加载和读取BeanDefinition。
+ * BeanDefinition是一种机制，可以让你指定如何创建一个特定类型的对象，如何配置它，以及这个对象应该在Spring应用上下文中的生命周期。
+ * 通过实现BeanDefinitionReader接口，你可以根据自己的需求从不同的源（例如XML、Java注解、数据库等）加载和读取BeanDefinition。
  *
  * @author wangzhibu
  * @date 2023/6/15 16:44:31

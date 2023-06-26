@@ -19,6 +19,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
+ * 这个类是AbstractBeanDefinitionReader的子类，专门用于从XML文件中加载和读取BeanDefinition。
+ * 在XML配置文件中，每个<bean>元素都会被转换成一个BeanDefinition对象。
+ * 然后这些BeanDefinition会被注册到Spring的BeanFactory中，等待后续的创建和配置。
+ *
  * @author wangzhibu
  * @date 2023/6/15 17:10:10
  */

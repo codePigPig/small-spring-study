@@ -31,5 +31,14 @@ public interface BeanFactory {
      */
     Object getBean(String beanName, Object... args)throws BeansException;
 
+    /**
+     * 获取Bean，返回指定的类型
+     *
+     * @param name         名字
+     * @param requiredType 所需类型
+     * @return {@link T }
+     * @author wangzhibu
+     * @date 2023/06/16
+     */
     <T> T getBean(String name, Class<T> requiredType) throws BeansException;
 }
